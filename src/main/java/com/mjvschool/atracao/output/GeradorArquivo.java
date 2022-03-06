@@ -45,14 +45,14 @@ public class GeradorArquivo {
 			conteudo.append(TextoUtil.ajustar(ct.getCadastro().getNome(), 30).toUpperCase() );	
 			conteudo.append(ct.getCadastro().getCelular().replaceAll("\\p{Punct}", ""));
 			conteudo.append(TextoUtil.ajustar(ct.getCadastro().getEndereco().getLogradouro().toUpperCase(),20));
-			conteudo.append(ct.getCadastro().getEndereco().getNumero());
+			//conteudo.append(String.format("%06s",ct.getCadastro().getEndereco().getNumero()));
 			conteudo.append(ct.getCadastro().getEndereco().getComplemento());	
 			conteudo.append(ct.getCadastro().getEndereco().getBairro());
 			conteudo.append(ct.getCadastro().getEndereco().getCidade());
 			conteudo.append(ct.getCadastro().getEndereco().getUF());
 			conteudo.append(ct.getCadastro().getEndereco().getCep().replaceAll("\\p{Punct}", ""));
 			conteudo.append(ct.getNumeroProtocolo());
-			conteudo.append(String.format("%06f", ct.getServico().getValor()).replaceAll("\\p{Punct}", ""));
+			conteudo.append(String.format("|%06f|", ct.getServico().getValor()).replaceAll("\\p{Punct}", ""));
 			conteudo.append(ct.getServico().getNome());
 			conteudo.append(ct.getData().replaceAll("\\p{Punct}", ""));
 			conteudo.append(ct.getHora().replaceAll("\\p{Punct}", ""));

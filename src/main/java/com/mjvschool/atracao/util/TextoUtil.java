@@ -22,7 +22,7 @@ public class TextoUtil {
 
 	public static String formatarData(LocalDateTime dataHora){
         Date data = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         String dataFormatada = dateFormat.format(data);
 		return dataFormatada;
     }
