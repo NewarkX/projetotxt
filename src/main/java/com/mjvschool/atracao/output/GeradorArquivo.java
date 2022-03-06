@@ -8,10 +8,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+
 import com.mjvschool.atracao.model.contrato.Contrato;
 import com.mjvschool.atracao.util.TextoUtil;
 
-import org.w3c.dom.Text;
+
 
 public class GeradorArquivo {
 	public void gerarArquivoCsv(List<Contrato> contratos) {
@@ -37,24 +38,24 @@ public class GeradorArquivo {
 		}
 	}
 	public void gerarArquivoTxt(List<Contrato> contratos) {
-		StringBuilder conteudo =new StringBuilder();
+		StringBuilder conteudo = new StringBuilder();
 		
 		for(Contrato ct: contratos) {
-			conteudo.append(ct.getCadastro().getCpf());
+			conteudo.append(ct.getCadastro().getCpf().replaceAll("\\p{Punct}", ""));
 			conteudo.append(TextoUtil.ajustar(ct.getCadastro().getNome(), 30) );	
-			conteudo.append(ct.getCadastro().getCelular());
+			conteudo.append(ct.getCadastro().getCelular().replaceAll("\\p{Punct}", ""));
 			conteudo.append(ct.getCadastro().getEndereco().getLogradouro());
 			conteudo.append(ct.getCadastro().getEndereco().getNumero());
 			conteudo.append(ct.getCadastro().getEndereco().getComplemento());	
 			conteudo.append(ct.getCadastro().getEndereco().getBairro());
 			conteudo.append(ct.getCadastro().getEndereco().getCidade());
 			conteudo.append(ct.getCadastro().getEndereco().getUF());
-			conteudo.append(ct.getCadastro().getEndereco().getCep());
+			conteudo.append(ct.getCadastro().getEndereco().getCep().replaceAll("\\p{Punct}", ""));
 			conteudo.append(ct.getNumeroProtocolo());
-			conteudo.append(ct.getServico().getValor());
+			conteudo.append(String.format("%06f", ct.getServico().getValor()).replaceAll("\\p{Punct}", ""));
 			conteudo.append(ct.getServico().getNome());
-			conteudo.append(ct.getData());
-			conteudo.append(ct.getHora());
+			conteudo.append(ct.getData().replaceAll("\\p{Punct}", ""));
+			conteudo.append(ct.getHora().replaceAll("\\p{Punct}", ""));
 		}
 		
 		System.out.println(conteudo.toString());

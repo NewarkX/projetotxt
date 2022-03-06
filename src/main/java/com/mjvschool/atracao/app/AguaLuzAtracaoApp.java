@@ -37,12 +37,12 @@ public class AguaLuzAtracaoApp {
 	
 		
 		Pessoa pessoa1 = new Pessoa();
-		pessoa1.setCpf("11094986089");
+		pessoa1.setCpf("007.324.223.21");
 		pessoa1.setNome("Raimundo Nonato Loureiro Castelo Branco");
 		pessoa1.setRg("98908");
 		pessoa1.setPais(Pais.ESTADOS_UNIDOS);
 		
-		pessoa1.setCelular("11976349678");
+		pessoa1.setCelular("(11)976349678");
 		
 		Endereco endereco1 = new Endereco();
 		endereco1.setBairro("São Sebastião");
