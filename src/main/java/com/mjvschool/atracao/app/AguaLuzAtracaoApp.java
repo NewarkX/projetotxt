@@ -42,7 +42,7 @@ public class AguaLuzAtracaoApp {
 		pessoa1.setRg("98908");
 		pessoa1.setPais(Pais.ESTADOS_UNIDOS);
 		
-		pessoa1.setCelular("(11)976349678");
+		pessoa1.setCelular("(11)99768-1515");
 		
 		Endereco endereco1 = new Endereco();
 		endereco1.setBairro("São Sebastião");

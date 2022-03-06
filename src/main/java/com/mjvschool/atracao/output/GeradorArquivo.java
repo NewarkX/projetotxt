@@ -42,9 +42,9 @@ public class GeradorArquivo {
 		
 		for(Contrato ct: contratos) {
 			conteudo.append(ct.getCadastro().getCpf().replaceAll("\\p{Punct}", ""));
-			conteudo.append(TextoUtil.ajustar(ct.getCadastro().getNome(), 30) );	
+			conteudo.append(TextoUtil.ajustar(ct.getCadastro().getNome(), 30).toUpperCase() );	
 			conteudo.append(ct.getCadastro().getCelular().replaceAll("\\p{Punct}", ""));
-			conteudo.append(ct.getCadastro().getEndereco().getLogradouro());
+			conteudo.append(TextoUtil.ajustar(ct.getCadastro().getEndereco().getLogradouro().toUpperCase(),20));
 			conteudo.append(ct.getCadastro().getEndereco().getNumero());
 			conteudo.append(ct.getCadastro().getEndereco().getComplemento());	
 			conteudo.append(ct.getCadastro().getEndereco().getBairro());
