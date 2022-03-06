@@ -45,7 +45,7 @@ public class GeradorArquivo {
 			conteudo.append(TextoUtil.ajustar(ct.getCadastro().getNome(), 30).toUpperCase() );	
 			conteudo.append(ct.getCadastro().getCelular().replaceAll("\\p{Punct}", ""));
 			conteudo.append(TextoUtil.ajustar(ct.getCadastro().getEndereco().getLogradouro().toUpperCase(),20));
-			//conteudo.append(String.format("%06s",ct.getCadastro().getEndereco().getNumero()));
+			conteudo.append(String.format("%s",ct.getCadastro().getEndereco().getNumero()));
 			conteudo.append(ct.getCadastro().getEndereco().getComplemento());	
 			conteudo.append(ct.getCadastro().getEndereco().getBairro());
 			conteudo.append(ct.getCadastro().getEndereco().getCidade());
