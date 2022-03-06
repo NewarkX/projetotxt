@@ -48,7 +48,7 @@ public class AguaLuzAtracaoApp {
 		endereco1.setBairro("São Sebastião");
 		endereco1.setCep("07.210.715");
 		endereco1.setCidade("São Raimundo Nonato");
-		endereco1.setUF("SP");
+		endereco1.setUF("Sp");
 		endereco1.setLogradouro("Rua Sebastião Firmino");
 		endereco1.setComplemento("AP 210 BL CENTAURO");
 		endereco1.setNumero("123");
